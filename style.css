@@ -236,7 +236,6 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 100;
@@ -256,3 +255,6 @@ h1::before, h1::after, h2::before, h2::after {
     margin: 0 5px;
 }
 
+.submit-button {
+    align-self: flex-end; /* Align button to the right */
+}
