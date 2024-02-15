@@ -8,9 +8,9 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
+        <div id="header" class="header-content" style="display: none;">
             <h1>Welcome Aakritit Rai</h1>
-            <p>A special place for a special person</p>
+            <p>A special place for special person </p>
         </div>
     </header>
     <main>
@@ -27,8 +27,10 @@
         </section>
         <section id="messages" style="display: none;">
             <div class="container">
-                <h2>Messages</h2>
-                <p>This space is reserved for special messages.</p>
+                <h2>Happy Valentines Day Baby</h2>
+                <p>Happy Valentines Day AAKI. I love you more than you know. Noone can make be laugh the way you do."You make me fucking HAPPY". I love doing things with you and also love doing nothing with you, I just want to be with you. I want to be there for you beside you cheering you up. I will be there for your highs and low. I love cookiing foods for you. The way you love me and show me how special I am is unimaginable. I love our short times in the bathroom, brushing our teeth; I love how we dance in the kitchen. 
+                    Today was such a speical day, I had never imagine I would ever celebrate Valentines Day. With you everything is easy; loving you is easy. I love you baby; I know this website will not be enough; I will keep updating it with our memories, goals and about us. I hope to share my life journey with you. I love you AAKUUUUU.  <br> 
+                     <span style="color: red">P.S: Aakriti Rai Karai Ma Fry; Utsav Whats up.</span></p>
             </div>
         </section>
         <section id="images" style="display: none;">
@@ -113,15 +115,27 @@
                     <a href="https://www.youtube.com/" target="_blank">Youtube</a><br />
                     <a href="https://us.princesspolly.com/" target="_blank">Princesspolly</a><br />
                     <a href="https://jsu.instructure.com/" target="_blank">Study Time</a>
+                    <a href="https://theflixertv.to/" target="_blank">Movie</a>
                 </div>
             </div>
         </section>
+        <section id="suggest" style="display: none;">
+            <div class=Container>
+                <div class="suggestion-container"></div>
+                <h2>Have any suggestions?</h2>
+                <textarea id="suggestion" rows="4" cols="50"></textarea>
+                <br>
+                <button onclick="submitSuggestion()">Submit</button>
+            </div>
     </main>
-    <footer>
+
+    <footer id="footer" style="display: none;">
         <div class="footer-content">
             <p>Created with love for Aaki</p>
         </div>
     </footer>
+    
+</section>
 
     <script>
         function login() {
@@ -137,9 +151,22 @@
                 document.getElementById("images").style.display = "block";
                 document.getElementById("songs").style.display = "block";
                 document.getElementById("links").style.display = "block";
+                document.getElementById("header").style.display = "block";
+                document.getElementById("suggest").style.display = "block";
+                document.getElementById("footer").style.display = "block";
             } else {
                 // Failed login, show error message
                 document.getElementById("login-error").style.display = "block";
+            }
+        }
+        function submitSuggestion() {
+            const suggestion = document.getElementById('suggestion').value;
+            if (suggestion.trim() !== '') {
+                alert('Thank you for your suggestion: ' + suggestion);
+                // Clear the suggestion box after submission
+                document.getElementById('suggestion').value = '';
+            } else {
+                alert('Please enter a suggestion before submitting.');
             }
         }
     </script>
